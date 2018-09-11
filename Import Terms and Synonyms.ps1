@@ -144,7 +144,7 @@ Try {
 
  
         #CSV File Header Row in Term to Add
-        $TermName = $_.$($TermHeaderInCSV)
+        [string]$TermName = $_.$($TermHeaderInCSV)
         
 
           
@@ -152,14 +152,14 @@ Try {
         $Terms = $TermSet.Terms
         $Ctx.Load($Terms)
         $Ctx.ExecuteQuery()
-        $Term = $Terms | Where-Object {$_.Name -eq $TermName}
+        [string]$Term = $Terms | Where-Object {$_.Name -eq $TermName}
         
      
         
 
         If(-not $Term) 
         {
-            
+            Start-Sleep -Milliseconds 750
             #Create Term Set
             Write-host "Creating Term '$TermName'" -ForegroundColor Green
             $Term = $TermSet.CreateTerm($TermName,1033,[System.Guid]::NewGuid().toString())
@@ -168,15 +168,16 @@ Try {
             for ($col=1; $col -le $noOfCols; $col++)
             {
 
-            $fullColName = "$LabelHeaderInCSV $($col)" 
+            [string]$fullColName = "$LabelHeaderInCSV $($col)" 
                       
 
-            $LabelName = $_.$($fullColName)    
+            [string]$LabelName = $_.$($fullColName)    
                      
             try {
 
             if (-not [string]::IsNullOrEmpty($LabelName))
             {
+            Start-Sleep -Milliseconds 500
             Write-Host "Creating Label '$LabelName'" -ForegroundColor Cyan
             $Label = $Term.CreateLabel($LabelName,1033,$false) 
             $Ctx.Load($Label) 
