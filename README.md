@@ -8,3 +8,6 @@ Powershell script that adds 1 minute to the modified date of each item in a list
 
 --- Automatically associate all sites with a single hub site ---
 Powershell script that iterates through each site, removes any existing hub site association and then adds the association defined in the parameters.
+
+--- Set Welcome Page ---
+Powershell script that sets Welcome/Landing page for when the root URL is entered (e.g what shows when you type http://<tenant>.sharepoint.com/ into URL bar)
