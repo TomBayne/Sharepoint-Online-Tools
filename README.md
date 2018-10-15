@@ -13,4 +13,4 @@ Powershell script that iterates through each site, removes any existing hub site
 Powershell script that sets Welcome/Landing page for when the root URL is entered (e.g what shows when you type http://<tenant>.sharepoint.com/ into URL bar)
   
 --- Fully remove all deleted sites ---
-Powershell script that fully (and permenantly) deletes previously deleted sites so the URL can be used again on new sites.
+Powershell script that fully (and permenantly) deletes previously deleted sites so the URL can be used again on new sites. There is no confirmation when this is ran and it wil delete ALL previously deleted sites. No active sites will be deleted by this script. Once this script is ran you will not be able to recover any sites that were deleted prior to using this script.
