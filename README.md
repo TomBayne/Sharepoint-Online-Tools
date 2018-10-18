@@ -14,3 +14,6 @@ Powershell script that sets Welcome/Landing page for when the root URL is entere
   
 --- Fully remove all deleted sites ---
 Powershell script that fully (and permenantly) deletes previously deleted sites so the URL can be used again on new sites. There is no confirmation when this is ran and it wil delete ALL previously deleted sites. No active sites will be deleted by this script. Once this script is ran you will not be able to recover any sites that were deleted prior to using this script.
+
+--- Add user as owner of all groups ---
+Adds users (such as admins) to the Owners list off all Office 365 groups. Useful for giving admins control of modern experience team sites. Change [user1] and [user2] in the script.
