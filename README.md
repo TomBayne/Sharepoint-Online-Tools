@@ -17,3 +17,6 @@ Powershell script that fully (and permenantly) deletes previously deleted sites 
 
 --- Add user as owner of all groups ---
 Adds users (such as admins) to the Owners list off all Office 365 groups. Useful for giving admins control of modern experience team sites. Change [user1] and [user2] in the script.
+
+--- List all checked out files and check in files checked out to a specific user ---
+Powershell script that iterates through each site, subsite, and library in a site collection and looks for all checked out files. A report will be created that contains information about checked out files across the whole site collection. The script also has the capability to check in files from a specific user. If you do not want this functionality, add some nonsense or an unused user claims to the variable
